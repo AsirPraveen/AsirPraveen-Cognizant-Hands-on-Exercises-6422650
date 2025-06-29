@@ -1,0 +1,28 @@
+SET SERVEROUTPUT ON;
+
+DECLARE
+  v_age NUMBER;
+BEGIN
+  FOR cust_rec IN (
+    SELECT c.CustomerID, c.Name, c.DOB
+    FROM Customers c
+  ) LOOP
+    -- Calculate age
+    v_age := TRUNC(MONTHS_BETWEEN(SYSDATE, cust_rec.DOB)/12);
+
+    IF v_age > 60 THEN
+      -- Update loans for this customer
+      UPDATE Loans
+      SET InterestRate = InterestRate - 1
+      WHERE CustomerID = cust_rec.CustomerID;
+
+      DBMS_OUTPUT.PUT_LINE(
+        'Applied 1% interest discount for customer: ' 
+        || cust_rec.Name 
+        || ', Age: ' || v_age
+      );
+    END IF;
+  END LOOP;
+
+  COMMIT;
+END;
