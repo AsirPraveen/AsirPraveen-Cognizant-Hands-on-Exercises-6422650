@@ -1,0 +1,35 @@
+/* Full screen center alignment */
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f0fdf4; /* soft green-tinted background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Centered card-style div */
+.mydiv {
+  text-align: center;
+  color: #065f46; /* dark green */
+  background-color: #ffffff;
+  padding: 2.5rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 128, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.mydiv:hover {
+  transform: scale(1.02);
+}
+
+h1 {
+  margin: 0 0 1.25rem 0;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #047857; /* emerald green */
+}

@@ -1,0 +1,27 @@
+.Name {
+  font-weight: 400;
+  color: #1e40af; /* A richer blue */
+  font-size: 1.25rem;
+}
+
+.School {
+  color: #dc143c; /* Crimson */
+  font-weight: 500;
+}
+
+.Total {
+  color: #8b008b; /* Dark Magenta */
+  font-weight: 500;
+}
+
+.Score {
+  color: #228b22; /* Forest Green */
+  font-weight: 500;
+}
+
+.formatstyle {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
